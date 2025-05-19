@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokemon Matching</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <!-- import jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -14,46 +15,29 @@
 
 <body>
     <header class="text-center">
-      <div
-        id="difficulty"
-        class="btn-group btn-group-toggle m-3"
-        data-toggle="buttons"
-      >
-        <label class="btn btn-primary active">
-          <input
-            type="radio"
-            value="easy"
-            name="options"
-            id="option1"
-            autocomplete="off"
-            checked=""
-          />
-          Easy
+      <div id="difficulty" class="flex space-x-4 my-4">
+        <label class="flex items-center space-x-2 cursor-pointer">
+          <input type="radio" value="easy" name="options" id="option1" autocomplete="off" checked class="accent-red-500">
+          <span class="text-lg font-semibold">Easy</span>
         </label>
-        <label class="btn btn-primary">
-          <input
-            type="radio"
-            value="medium"
-            name="options"
-            id="option2"
-            autocomplete="off"
-          />
-          Medium
+        <label class="flex items-center space-x-2 cursor-pointer">
+          <input type="radio" value="medium" name="options" id="option2" autocomplete="off" class="accent-yellow-500">
+          <span class="text-lg font-semibold">Medium</span>
         </label>
-        <label class="btn btn-primary">
-          <input
-            type="radio"
-            value="hard"
-            name="options"
-            id="option3"
-            autocomplete="off"
-          />
-          Hard
+        <label class="flex items-center space-x-2 cursor-pointer">
+          <input type="radio" value="hard" name="options" id="option3" autocomplete="off" class="accent-green-500">
+          <span class="text-lg font-semibold">Hard</span>
         </label>
       </div>
       <br />
-      <a href="./index.html"><button class="btn btn-primary">Reset</button></a>
-      <button class="btn btn-primary" id="start">Start!</button>
+      <a href="./index.html">
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-200 shadow-md mr-2">
+          Reset
+        </button>
+      </a>
+      <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-200 shadow-md mr-2" id="start">
+        Start!
+      </button>
       <section id="info" style="display: none">
         <div id="total_pairs"></div>
         <div id="num_of_matches"></div>
@@ -65,8 +49,12 @@
     <div id="game_grid" style="display: none">
     </div>
     <section id="themes" class="text-center" style="display: none;">
-      <button id="dark" class="btn btn-dark"> Dark </button>
-      <button id="light" class="btn btn-light"> light </button>
+      <button id="dark" class="bg-gray-800 hover:bg-black text-white font-bold py-2 px-4 rounded transition duration-200 shadow-md mr-2">
+        Dark
+      </button>
+      <button id="light" class="bg-yellow-200 hover:bg-yellow-400 text-gray-800 font-bold py-2 px-4 rounded transition duration-200 shadow-md">
+        Light
+      </button>
     </section>
   </body>
 </html>
