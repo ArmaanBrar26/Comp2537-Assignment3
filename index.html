@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Matching</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+    <header class="text-center">
+      <div
+        id="difficulty"
+        class="btn-group btn-group-toggle m-3"
+        data-toggle="buttons"
+      >
+        <label class="btn btn-primary active">
+          <input
+            type="radio"
+            value="easy"
+            name="options"
+            id="option1"
+            autocomplete="off"
+            checked=""
+          />
+          Easy
+        </label>
+        <label class="btn btn-primary">
+          <input
+            type="radio"
+            value="medium"
+            name="options"
+            id="option2"
+            autocomplete="off"
+          />
+          Medium
+        </label>
+        <label class="btn btn-primary">
+          <input
+            type="radio"
+            value="hard"
+            name="options"
+            id="option3"
+            autocomplete="off"
+          />
+          Hard
+        </label>
+      </div>
+      <br />
+      <a href="./index.html"><button class="btn btn-primary">Reset</button></a>
+      <button class="btn btn-primary" id="start">Start!</button>
+      <section id="info" style="display: none">
+        <div id="total_pairs"></div>
+        <div id="num_of_matches"></div>
+        <div id="num_of_pairs"></div>
+        <div id="num_of_clicks"></div>
+        <div id="timer"></div>
+      </section>
+    </header>
+    <div id="game_grid" style="display: none">
+    </div>
+    <section id="themes" class="text-center" style="display: none;">
+      <button id="dark" class="btn btn-dark"> Dark </button>
+      <button id="light" class="btn btn-light"> light </button>
+    </section>
+  </body>
+</html>
