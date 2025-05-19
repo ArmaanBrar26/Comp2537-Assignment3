@@ -161,7 +161,7 @@ async function fillHtml(difficulty, totalPairs, totalTime) {
    $("#total_pairs").empty();
   $("#total_pairs").append(`<h1>Total Pairs: ${totalPairs}</h1>`);
   $("#num_of_matches").empty();
-  $("#num_of_matches").append(`<h1>Number of Matches: ${numOfMatches}</h1>`);
+  $("#num_of_matches").append(`<h1>Number of Matches: ${matchedCards}</h1>`);
   numToWin = totalPairs;
   $("#num_of_pairs").empty();
   $("#num_of_pairs").append(`<h1>Matches remaining: ${numToWin}<h1>`);
