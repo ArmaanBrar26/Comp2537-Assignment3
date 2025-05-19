@@ -53,7 +53,7 @@ const setup = async () => {
       const gameInfo = document.getElementById("info");
       gameInfo.style.display = "inline";
       const gameContainer = document.getElementById("game_grid");
-      gameContainer.style.display = "";
+      gameContainer.style.display = "flex";
       gameContainer.style.width = `${width}px`;
       gameContainer.style.height = `${height}px`;
       const startButton = document.getElementById("start");
