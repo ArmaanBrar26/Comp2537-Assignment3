@@ -8,7 +8,6 @@ var startTime = 0;
 var timerInterval;
 
 
-
 const setup = async () => {
   let firstCard = undefined
   let secondCard = undefined
@@ -148,7 +147,6 @@ function startTimer()
     clearInterval(timerInterval);
     alert("Time is up! You lose!");
     $("#game_grid").empty();
-    $("#game_grid").append("<h1><a href='index.html'>Play Again</a></h1>");
     }
   }, 1000);
 }
@@ -158,7 +156,7 @@ function stopTimer() {
 }
 
 async function fillHtml(difficulty, totalPairs, totalTime) {
-   $("#total_pairs").empty();
+  $("#total_pairs").empty();
   $("#total_pairs").append(`<h1>Total Pairs: ${totalPairs}</h1>`);
   $("#num_of_matches").empty();
   $("#num_of_matches").append(`<h1>Number of Matches: ${matchedCards}</h1>`);
